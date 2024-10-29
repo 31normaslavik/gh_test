@@ -3,15 +3,6 @@
 #include <vector>
 #include <version>
 
-// #ifdef __has_include
-// #  if __has_include(<format>)
-// #    include <format>
-// #    define have_format 1
-// #  else
-// #    define have_format 0
-// #    endif // __has_include(<format>)
-// #endif
-
 #ifdef __cpp_lib_format 
   #ifdef  __cpp_lib_format_ranges //>= 201907L
     #include <format>
