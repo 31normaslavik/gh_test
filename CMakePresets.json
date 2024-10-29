@@ -1,0 +1,267 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 22,
+        "patch": 1
+    },
+    "configurePresets": [
+        {
+            "name": "Debug",
+            "displayName": "Debug",
+            "binaryDir": "${sourceDir}/build/vscode/${presetName}",
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/vscode/install/${presetName}",
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            },
+            "hidden": true
+        },
+        {
+            "name": "Release",
+            "displayName": "Release",
+            "binaryDir": "${sourceDir}/build/vscode/${presetName}",
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/vscode/install/${presetName}",
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            },
+            "hidden": true
+        },
+        {
+            "name": "gccDebug",
+            "displayName": "Debug GCC 14.2.1 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/gcc, CXX = /usr/bin/g++",
+            "inherits": "Debug",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++"
+            }
+        },
+        {
+            "name": "gccRelease",
+            "displayName": "Release GCC 14.2.1 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/gcc, CXX = /usr/bin/g++",
+            "inherits": "Release",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++"
+            }
+        },
+        {
+            "name": "clangDebug",
+            "displayName": "Debug Clang 18.1.8 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/clang, CXX = /usr/bin/clang++",
+            "inherits": "Debug",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++"
+            }
+        },
+        {
+            "name": "clangRelease",
+            "displayName": "Release Clang 18.1.8 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/clang, CXX = /usr/bin/clang++",
+            "inherits": "Release",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++"
+            }
+        },
+        {
+            "name": "clang16Debug",
+            "displayName": "Debug Clang 16.0.6 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/lib/llvm16/bin/clang, CXX = /usr/lib/llvm16/bin/clang++",
+            "inherits": "Debug",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/lib/llvm16/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/lib/llvm16/bin/clang++"
+            }
+        },
+        {
+            "name": "clang16Release",
+            "displayName": "Release Clang 16.0.6 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/lib/llvm16/bin/clang, CXX = /usr/lib/llvm16/bin/clang++",
+            "inherits": "Release",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/lib/llvm16/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/lib/llvm16/bin/clang++"
+            }
+        },
+        {
+            "name": "gcc11Debug",
+            "displayName": "Debug GCC 11.4.0 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/gcc-11, CXX = /usr/bin/g++-11",
+            "inherits": "Debug",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/gcc-11",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++-11"
+            }
+        },
+        {
+            "name": "gcc11Release",
+            "displayName": "Release GCC 11.4.0 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/gcc-11, CXX = /usr/bin/g++-11",
+            "inherits": "Release",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/vscode/install/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/gcc-11",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++-11"
+            }
+        },
+        {
+            "name": "gcc12Release",
+            "displayName": "Release GCC 12.3.0 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/gcc-12, CXX = /usr/bin/g++-12",
+            "inherits": "Release",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/gcc-12",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++-12"
+            }
+        },
+        {
+            "name": "gcc12Debug",
+            "displayName": "Debug GCC 12.3.0 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/gcc-12, CXX = /usr/bin/g++-12",
+            "inherits": "Debug",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/gcc-12",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++-12"
+            }
+        },
+        {
+            "name": "gcc13Debug",
+            "displayName": "Debug GCC 13.3.0 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/gcc-13, CXX = /usr/bin/g++-13",
+            "inherits": "Debug",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/gcc-13",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++-13"
+            }
+        },
+        {
+            "name": "gcc13Release",
+            "displayName": "Release GCC 13.3.0 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/gcc-13, CXX = /usr/bin/g++-13",
+            "inherits": "Release",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/gcc-13",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++-13"
+            }
+        },
+        {
+            "name": "clang15Debug",
+            "displayName": "Debug Clang 15.0.7 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/lib/llvm15/bin/clang, CXX = /usr/lib/llvm15/bin/clang++",
+            "inherits": "Debug",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/lib/llvm15/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/lib/llvm15/bin/clang++"
+            }
+        },
+        {
+            "name": "clang15Release",
+            "displayName": "Release Clang 15.0.7 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/lib/llvm15/bin/clang, CXX = /usr/lib/llvm15/bin/clang++",
+            "inherits": "Release",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/lib/llvm15/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/lib/llvm15/bin/clang++"
+            }
+        },
+        {
+            "name": "clang14Debug",
+            "displayName": "Debug Clang 14.0.6 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/lib/llvm14/bin/clang, CXX = /usr/lib/llvm14/bin/clang++",
+            "inherits": "Debug",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/lib/llvm14/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/lib/llvm14/bin/clang++"
+            }
+        },
+        {
+            "name": "clang14Release",
+            "displayName": "Release Clang 14.0.6 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/lib/llvm14/bin/clang, CXX = /usr/lib/llvm14/bin/clang++",
+            "inherits": "Release",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/lib/llvm14/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/lib/llvm14/bin/clang++"
+            }
+        },
+        {
+            "name": "minGw64Debug",
+            "displayName": "MinGW 13.1.0 x86_64-w64-mingw32",
+            "description": "Using compilers: C = /usr/bin/x86_64-w64-mingw32-gcc, CXX = /usr/bin/x86_64-w64-mingw32-g++",
+            "inherits": "Debug",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/x86_64-w64-mingw32-gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/x86_64-w64-mingw32-g++"
+            }
+        },
+        {
+            "name": "aarch64Release",
+            "displayName": "Release GCC 14.1.0 aarch64-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/aarch64-linux-gnu-gcc, CXX = /usr/bin/aarch64-linux-gnu-g++",
+            "inherits": "Release",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/aarch64-linux-gnu-gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/aarch64-linux-gnu-g++"
+            }
+        },
+        {
+            "name": "aarch64Debug",
+            "displayName": "Debug GCC 14.1.0 aarch64-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/aarch64-linux-gnu-gcc, CXX = /usr/bin/aarch64-linux-gnu-g++",
+            "inherits": "Debug",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/aarch64-linux-gnu-gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/aarch64-linux-gnu-g++"
+            }
+        },
+        {
+            "name": "armDebug",
+            "displayName": "Debug GCC 14.0.0 arm-linux-gnueabihf",
+            "description": "Using compilers: C = /usr/bin/arm-linux-gnueabihf-gcc, CXX = /usr/bin/arm-linux-gnueabihf-g++",
+            "inherits": "Debug",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/arm-linux-gnueabihf-gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/arm-linux-gnueabihf-g++"
+            }
+        },
+        {
+            "name": "armRelease",
+            "displayName": "Release GCC 14.0.0 arm-linux-gnueabihf",
+            "description": "Using compilers: C = /usr/bin/arm-linux-gnueabihf-gcc, CXX = /usr/bin/arm-linux-gnueabihf-g++",
+            "inherits": "Release",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/arm-linux-gnueabihf-gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/arm-linux-gnueabihf-g++"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "clangDebug",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "clangDebug",
+            "targets": [
+                "all"
+            ],
+            "jobs": 5
+        },
+        {
+            "name": "clangReleaseBuild",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "clangRelease",
+            "targets": [
+                "all"
+            ],
+            "jobs": 5
+        }
+    ]
+}
