@@ -3,11 +3,6 @@
 #include <vector>
 #include <version>
 
-#ifdef __cpp_lib_format 
-  #ifdef  __cpp_lib_format_ranges //>= 201907L
-    #include <format>
-  #endif  
-#endif // __cpp_lib_format
 
 int main(int, char**){
 
